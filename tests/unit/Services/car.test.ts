@@ -80,4 +80,11 @@ describe('Testa a camada Service da rota /cars', function () {
     const car = await carService.getById(carId);
     expect(car).to.be.deep.equal(carOutput);
   });
+
+  it('testa a atualização de um carro', async function () {
+    const carService = new CarService();
+    sinon.stub(Model, 'findByIdAndUpdate').resolves(carOutput);
+    const car = await carService.update(carId, carInput);
+    expect(car).to.be.deep.equal(carOutput);
+  });
 });
