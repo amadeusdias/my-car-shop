@@ -1,8 +1,8 @@
-class NewError extends Error {
-  constructor(message: string, status: string) {
+class NewCustomError extends Error {
+  constructor(status: string, message: string) {
     super(message);
     this.stack = status;
   }
 }
 
-export default NewError;  
+export default NewCustomError;  

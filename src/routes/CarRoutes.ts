@@ -15,5 +15,9 @@ routerCar.get('/:id', (req, res, next) => {
   const controller = new CarController(req, res, next);
   controller.getById();
 });
+routerCar.put('/:id', (req, res, next) => {
+  const controller = new CarController(req, res, next);
+  controller.update();
+});
 
 export default routerCar;

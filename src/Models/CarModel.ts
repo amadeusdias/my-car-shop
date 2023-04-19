@@ -16,17 +16,17 @@ class CarModel extends AbstractODM<ICar> {
     super(schema, 'Car');
   }
 
-  public async create(car: ICar): Promise<ICar> {
-    return this.model.create({ ...car });
-  }
+  // public async create(car: ICar): Promise<ICar> {
+  //   return this.model.create({ ...car });
+  // }
 
-  public getAll(): Promise<ICar[]> {
-    return this.model.find().exec();
-  }
+  // public getAll(): Promise<ICar[]> {
+  //   return this.model.find();
+  // }
 
-  public getById(id: string): Promise<ICar | null> {
-    return this.model.findById(id).exec();
-  }
+  // public getById(id: string): Promise<ICar | null> {
+  //   return this.model.findById(id).exec();
+  // }
 }
 
 export default CarModel;
